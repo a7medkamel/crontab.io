@@ -1,0 +1,34 @@
+{
+  "name": "crontab.io",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a7medkamel/crontab.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a7medkamel/crontab.io/issues"
+  },
+  "homepage": "https://github.com/a7medkamel/crontab.io#readme",
+  "dependencies": {
+    "ascoltatori": "^4.1.0",
+    "bluebird": "^3.5.1",
+    "config": "^1.27.0",
+    "config-url": "git+https://github.com/a7medkamel/config-url.git",
+    "crontab-core-engine": "git+https://github.com/a7medkamel/crontab-core-engine.git",
+    "lodash": "^4.17.4",
+    "on-finished": "^2.3.0",
+    "parse-curl": "^0.2.5",
+    "redis": "^2.8.0",
+    "request": "^2.83.0",
+    "taskmill-core-account-sdk": "git+https://github.com/a7medkamel/taskmill-core-account-sdk.git",
+    "taskmill-core-git": "git+https://github.com/a7medkamel/taskmill-core-git.git",
+    "winston": "^2.4.0"
+  }
+}
