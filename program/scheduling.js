@@ -4,6 +4,7 @@ var Promise       = require('bluebird')
   , http          = require('crontab-core-engine/lib/http')
   , ascoltatori   = require('ascoltatori')
   , redis         = require('redis')
+  , winston       = require('winston')
   ;
 
 let redis_options = {
