@@ -43,7 +43,7 @@ Promise
       var remote          = msg.remote   //|| 'https://github.com/a7medkamel/taskmill-core-agent.git'
         , branch          = msg.branch   || 'master'
         , text            = msg.blob
-        , key             = `cron:repository:${remote}:${branch}`
+        , key             = `repository:${remote}:${branch}`
         ;
 
       return scheduler
