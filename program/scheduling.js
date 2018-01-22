@@ -18,11 +18,13 @@ let scheduler = new Scheduler({ redis_options });
 
 scheduler.monitor();
 
+const limit = config.get('cron.limit_per_crontab');
+
 http
   .listen({ port : config.get('cron.port')  })
   .then((app) => {
     app.scheduler = scheduler;
-    app.limit = config.get('cron.limit_per_crontab');
+    app.limit = limit;
   });
 
 
@@ -48,7 +50,7 @@ Promise
         ;
 
       return scheduler
-              .update_from_text(key, text, { remote, branch })
+              .update_from_text(key, text, { remote, branch }, { limit })
               .catch((err) => {
                 winston.error(err);
               });
