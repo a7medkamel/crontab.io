@@ -10,6 +10,18 @@ var Promise     = require('bluebird')
   , config      = require('config-url')
   ;
 
+Promise.config({
+  longStackTraces: true
+})
+
+process.on('unhandledRejection', (err, p) => {
+  winston.error(err);
+});
+
+process.on('uncaughtException', (err) => {
+  winston.error(err);
+});
+
 let handler = (e) => {
   let { key, meta, command } = e;
 
